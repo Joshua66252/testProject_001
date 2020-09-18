@@ -5,14 +5,15 @@
   var miliSecsFast = document.createElement("INPUT");
   miliSecsFast.setAttribute("type", "number");
   var delayNum = 250;
+  var oneDone = false;
   miliSecsFast.value = delayNum;
   setInterval(function(){
     delayNum = parseInt(miliSecsFast.value)
     setTimeout(function(){
       document.getElementById("text001").innerHTML = "1";
+      oneDone = true;
     }, delayNum);
-    setTimeout(function(){
-      document.getElementById("text001").innerHTML = "2";
-    }, delayNum*2);
+    while(oneDone==false){}
+    document.getElementById("text001").innerHTML = "2";
   }, delayNum*2);
 </script>
