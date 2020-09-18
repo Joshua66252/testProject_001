@@ -4,9 +4,9 @@
 <input type="number" id="miliSecsFast"></input>
 <script>
   var delayNum = 250;
-  document.getElementById("miliSecsFast").innerHTML = delayNum;
+  document.getElementById("miliSecsFast").value = delayNum;
   setInterval(function(){
-    delayNum = parseInt(document.getElementById("miliSecsFast").innerHTML)
+    delayNum = parseInt(document.getElementById("miliSecsFast").value)
     setTimeout(function(){
       document.getElementById("text001").innerHTML = "1";
     }, delayNum);
