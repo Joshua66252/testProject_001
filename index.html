@@ -1,12 +1,13 @@
 <title>Test Project 001</title>
 <h1 id="text001">2</h1>
 <b1>Delay In MiliSeconds</b1>
-<input type="number" id="miliSecsFast"></input>
 <script>
+  var miliSecsFast = document.createElement("INPUT");
+  miliSecsFast.setAttribute("type", "number");
   var delayNum = 250;
-  document.getElementById("miliSecsFast").value = delayNum;
+  miliSecsFast.value = delayNum;
   setInterval(function(){
-    delayNum = parseInt(document.getElementById("miliSecsFast").value)
+    delayNum = parseInt(miliSecsFast.value)
     setTimeout(function(){
       document.getElementById("text001").innerHTML = "1";
     }, delayNum);
