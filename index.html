@@ -2,15 +2,12 @@
 <h1 id="text001">Not Test</h1>
 <script>
   var delayNum = 1000
-  function func001(){
-    document.getElementById("text001").innerHTML = "1";
-  }
-  function func002(){
-    document.getElementById("text001").innerHTML = "2";
-  }
-  function func003(){
-    setTimeout(func001(), delayNum)
-    setTimeout(func002(), delayNum*2)
-  }
-  setInterval(func003(), delayNum*2)
+  setInterval(function(){
+    setTimeout(function(){
+      document.getElementById("text001").innerHTML = "1";
+    }, delayNum);
+    setTimeout(function(){
+      document.getElementById("text001").innerHTML = "2";
+    }, delayNum*2);
+  }, delayNum*2);
 </script>
