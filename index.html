@@ -11,10 +11,7 @@
     delayNum = parseInt(miliSecsFast.value)
     setTimeout(function(){
       document.getElementById("text001").innerHTML = "1";
-      oneDone = true;
     }, delayNum);
-    while(oneDone==false){}
-    oneDone = false;
     document.getElementById("text001").innerHTML = "2";
   }, delayNum*2);
 </script>
