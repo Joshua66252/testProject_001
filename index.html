@@ -1,11 +1,11 @@
 <title>Test Project 001</title>
 <h1 id="text001">2</h1>
-<b1>Delay In Seconds</b1>
-<input type="number" id="secsFast">1</input>
+<b1>Delay In MiliSeconds</b1>
+<input type="number" id="miliSecsFast"></input>
 <script>
   var delayNum = 250;
   setInterval(function(){
-    delayNum = parseFloat(secsFast)*1000
+    delayNum = parseFloat(miliSecsFast)
     setTimeout(function(){
       document.getElementById("text001").innerHTML = "1";
     }, delayNum);
