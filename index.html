@@ -9,9 +9,9 @@
   miliSecsFast.value = delayNum;
   setInterval(function(){
     delayNum = parseInt(miliSecsFast.value)
+    document.getElementById("text001").innerHTML = "1";
     setTimeout(function(){
-      document.getElementById("text001").innerHTML = "1";
+      document.getElementById("text001").innerHTML = "2";
     }, delayNum);
-    document.getElementById("text001").innerHTML = "2";
-  }, delayNum*2);
+  }, delayNum);
 </script>
